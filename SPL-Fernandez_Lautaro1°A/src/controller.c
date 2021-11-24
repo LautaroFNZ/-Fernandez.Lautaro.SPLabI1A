@@ -132,9 +132,6 @@ LinkedList* controller_filtrarGenero(LinkedList* pArrayListMovies,int tipo)
 
 		}
 
-
-
-
 		controller_listarMovies(filtro);
 
 
@@ -148,4 +145,15 @@ LinkedList* controller_filtrarGenero(LinkedList* pArrayListMovies,int tipo)
 
 }
 
+LinkedList* controller_asignarTime(LinkedList* pArrayListMovies)
+{
+	LinkedList* new = ll_newLinkedList();
+
+	if(pArrayListMovies!=NULL && new!=NULL)
+	{
+		new = ll_map(pArrayListMovies, movies_setNewTime);
+	}
+
+	return new;
+}
 

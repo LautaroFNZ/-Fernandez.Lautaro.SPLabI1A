@@ -18,7 +18,7 @@ int main(void) {
 	setbuf(stdout,NULL);
 
 	LinkedList* movies = ll_newLinkedList();
-	//LinkedList* filtro = ll_newLinkedList();
+	LinkedList* filtro = ll_newLinkedList();
 
 	int option;
 	int suboption;
@@ -44,6 +44,16 @@ int main(void) {
 				if(flag!=0)
 				{
 				controller_listarMovies(movies);
+				}else printf("Primero debe cargar los datos!\n");
+
+				break;
+
+			case 3:
+				if(flag!=0)
+				{
+					filtro = controller_asignarTime(movies);
+					controller_listarMovies(filtro);
+
 				}else printf("Primero debe cargar los datos!\n");
 
 				break;
@@ -79,6 +89,17 @@ int main(void) {
 				}else printf("Primero debe cargar los datos!\n");
 
 				break;
+
+			case 6:
+				if(flag!=0)
+				{
+					printf("Guardando los datos del punto 3...\n");
+
+				}else printf("Primero debe cargar los datos!\n");
+
+
+				break;
+
 
 
 		}

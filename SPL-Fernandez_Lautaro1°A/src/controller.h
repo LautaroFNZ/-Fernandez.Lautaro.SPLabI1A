@@ -21,6 +21,7 @@ int menu();
 int controller_loadMoviesFromText(char* path,LinkedList* pArrayListMovies);
 void controller_listarMovies(LinkedList* pArrayListMovies);
 LinkedList* controller_filtrarGenero(LinkedList* pArrayListMovies,int tipo);
+LinkedList* controller_asignarTime(LinkedList* pArrayListMovies);
 
 
 

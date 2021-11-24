@@ -12,6 +12,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <time.h>
 #include "LinkedList.h"
 
 typedef struct
@@ -50,6 +51,7 @@ int movies_filtrarAction(void* element);
 int movies_filtrarWestern(void* element);
 int movies_filtrarThriller(void* element);
 
+void* movies_setNewTime(void* this);
 
 
 

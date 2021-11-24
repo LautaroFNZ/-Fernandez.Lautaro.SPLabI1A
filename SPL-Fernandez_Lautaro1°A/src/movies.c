@@ -373,7 +373,21 @@ int movies_filtrarThriller(void* element)
 	return exito;
 }
 
+void* movies_setNewTime(void* this)
+{
+	int numero;
+	int max=240;
+	int min=100;
+	srand(time(NULL));
 
+	numero = rand() % (max-min+1) + min;
+
+	eMovies* aux = (eMovies*) this;
+
+	movies_setTime(aux, numero);
+
+	return aux;
+}
 
 
 
